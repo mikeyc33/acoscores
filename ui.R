@@ -59,6 +59,15 @@ shinyUI(navbarPage("Year 1 ACO CAHPS and Clinical Scores", id="nav",
       width = 330, height = "auto",
                               
       h2("ACO Quality Explorer"),
+      p(class="text-small", "This map explores the relationship between CAHPS, expenditure, and clinical outcome
+        data for Year 1 Medicare Shared Savings Program ACOs. Circles represent the location
+        of the ACO. The user can select separate measures to represent the color and size of the circles. 
+        Darker colors and larger radius represent higher performance for the specified measures. In addition, you
+        can zoom-in and click the circles to get additional information. The data used for this map is 
+        publicly available through 'data.cms.gov', and can 
+        be downloaded",
+        a(href="https://data.cms.gov/ACO/Medicare-Shared-Savings-Program-Accountable-Care-O/yuq5-65xt", 
+          target="_blank", "here.")),
                                 
       selectInput("color", "Color", vars, selected = "CAHPS_score"),
       selectInput("size", "Size", vars, selected = "benes"),
